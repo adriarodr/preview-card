@@ -4,6 +4,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Table of contents
 
+- [Note](#note)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
@@ -15,6 +16,9 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
+
+## Note
+This was originally on my personal account, but I decided to transfer it to my professional account.
 
 ## Overview
 
@@ -31,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Github Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/product-preview-card-component-noBGge-Fv0)
+- Live Site URL: [Github Pages](https://adriarodr.github.io/preview-card/)
 
 ## My process
 
@@ -87,6 +91,3 @@ Even though this challenge did not require JavaScript, I would like to learn Jav
 Thanks to Kevin Powell for his amazing videos that helped me understand media queries and grid boxes and showed a clever way to center objects using grid boxes and place-items: center.
 
 Thanks to Andy Bell Modern CSS Reset, which I've used on multiple projects to help reduce inconsistencies between browsers.
-
-## Note
-This was originally on my personal account, but I decided to transfer it to my professional account.
