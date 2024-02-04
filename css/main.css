@@ -1,0 +1,247 @@
+:root {
+    --primary-200: hsl(30, 38%, 92%);
+    --primary-600: hsl(158, 36%, 37%);
+
+
+    --neutral-100: hsl(0, 0%, 100%);
+    --neutral-300: hsla(228, 12%, 48%,.3);
+    --neutral-600: hsl(228, 12%, 48%);
+    --neutral-700: hsl(156, 42%, 18%);
+    --neutral-800: hsl(212, 21%, 14%);
+
+    --fw-200: 300;
+    --fw-400: 500;
+    --fw-700: 700;
+
+    --fs-300: 0.75rem; /* 12px */
+    --fs-400: 0.875rem; /* 14px */
+    --fs-700: 2rem; /* 32px */
+
+}
+
+/* Start of Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove the text decoration for ins */
+
+ins {
+    text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End of Reset */
+
+/* My CSS */
+
+body {
+  background-color: var(--primary-200);
+  color: var(--neutral-600);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--fw-400);
+  font-size: var(--fs-400);
+  line-height: 1.8;
+  
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+h1 {
+  color: var(--neutral-800);
+  margin-bottom: 1.25rem;
+  font-size: var(--fs-700);
+}
+
+h2 {
+  color: var(--primary-600);
+  font-size: var(--fs-700);
+}
+
+h1,
+h2 {
+  font-family: 'Fraunces', serif;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: var(--fw-200);
+  letter-spacing: 0.42rem;
+  font-size: var(--fs-200);
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+.card { 
+  max-width: 21.25rem;
+  margin: 1rem;
+  border-radius: 10px;
+
+  display: grid;
+}
+
+.card__img {
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__content {
+  padding: 1.5rem;
+}
+
+.card__content p {
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-direction: column; 
+}
+
+/* Spacing increase under the price when screen is larger than 320px */
+
+@media (min-width: 20rem) {
+  .price {
+    gap: 1.1875rem;
+    margin-bottom: 1.5625rem;
+    flex-direction: row;
+  }
+}
+
+.add-to-cart {
+  cursor: pointer;
+  background-color: var(--primary-600);
+  border: none;
+  margin: 0 auto;
+  color: var(--neutral-100);
+  border-radius: 8px;
+  padding: 1em 5.8em;
+  
+  display: grid;
+  place-items: center;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.add-to-cart:hover,
+.add-to-cart:active {
+  background-color: var(--neutral-700);
+}
+
+.add-to-cart:active { 
+  outline: none;
+  box-shadow: 0 0 0 4px var(--neutral-300);
+}
+
+.icon_btn {
+  min-width: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 37.5rem;
+  }
+
+  .card__img {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .add-to-cart {
+    padding: 1em 4.5em;
+  }
+
+}
+
+.attribution { 
+  font-size: var(--fs-400); 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: var(--primary-600); 
+}
+
+/* Utility */
+
+.bg-primary { 
+  background-color: var(--neutral-100);
+}
